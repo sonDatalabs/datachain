@@ -110,7 +110,6 @@ public class ForkIdsTest {
               new ForkId(Bytes.ofUnsignedInt(0xe029e991L), 12244000L),
               new ForkId(Bytes.ofUnsignedInt(0xeb440f6L), 12965000L),
               new ForkId(Bytes.ofUnsignedInt(0xb715077dL), 13773000L),
-              new ForkId(Bytes.ofUnsignedInt(0xe3abe201L), 15000000L),
               new ForkId(Bytes.ofUnsignedInt(0x20c327fc), 0L),
               new ForkId(Bytes.ofUnsignedInt(0x20c327fc), 0L))
         },
