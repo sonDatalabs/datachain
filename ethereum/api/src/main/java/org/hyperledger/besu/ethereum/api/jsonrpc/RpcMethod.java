@@ -73,7 +73,7 @@ public enum RpcMethod {
   PRIVX_FIND_PRIVACY_GROUP("privx_findFlexiblePrivacyGroup"),
   EEA_SEND_RAW_TRANSACTION("eea_sendRawTransaction"),
   ETH_ACCOUNTS("eth_accounts"),
-  ETH_BLOCK_NUMBER("eth_blockNumber"),
+  ETH_BLOCK_NUMBER("mmm_blockNumber"),
   ETH_CALL("eth_call"),
   ETH_CHAIN_ID("eth_chainId"),
   ETH_COINBASE("eth_coinbase"),

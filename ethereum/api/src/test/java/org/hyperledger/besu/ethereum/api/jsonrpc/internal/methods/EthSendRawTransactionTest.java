@@ -53,7 +53,7 @@ public class EthSendRawTransactionTest {
   public void requestIsMissingParameter() {
     final JsonRpcRequestContext request =
         new JsonRpcRequestContext(
-            new JsonRpcRequest("2.0", "eth_sendRawTransaction", new String[] {}));
+            new JsonRpcRequest("2.0", "mmm_blockNumber", new String[] {}));
 
     final JsonRpcResponse expectedResponse =
         new JsonRpcErrorResponse(request.getRequest().getId(), JsonRpcError.INVALID_PARAMS);
@@ -66,7 +66,7 @@ public class EthSendRawTransactionTest {
   @Test
   public void requestHasNullObjectParameter() {
     final JsonRpcRequestContext request =
-        new JsonRpcRequestContext(new JsonRpcRequest("2.0", "eth_sendRawTransaction", null));
+        new JsonRpcRequestContext(new JsonRpcRequest("2.0", "mmm_blockNumber", null));
 
     final JsonRpcResponse expectedResponse =
         new JsonRpcErrorResponse(request.getRequest().getId(), JsonRpcError.INVALID_PARAMS);
@@ -80,7 +80,7 @@ public class EthSendRawTransactionTest {
   public void requestHasNullArrayParameter() {
     final JsonRpcRequestContext request =
         new JsonRpcRequestContext(
-            new JsonRpcRequest("2.0", "eth_sendRawTransaction", new String[] {null}));
+            new JsonRpcRequest("2.0", "mmm_blockNumber", new String[] {null}));
 
     final JsonRpcResponse expectedResponse =
         new JsonRpcErrorResponse(request.getRequest().getId(), JsonRpcError.INVALID_PARAMS);
@@ -96,7 +96,7 @@ public class EthSendRawTransactionTest {
 
     final JsonRpcRequestContext request =
         new JsonRpcRequestContext(
-            new JsonRpcRequest("2.0", "eth_sendRawTransaction", new String[] {rawTransaction}));
+            new JsonRpcRequest("2.0", "mmm_blockNumber", new String[] {rawTransaction}));
 
     final JsonRpcResponse expectedResponse =
         new JsonRpcErrorResponse(request.getRequest().getId(), JsonRpcError.INVALID_PARAMS);
@@ -113,7 +113,7 @@ public class EthSendRawTransactionTest {
 
     final JsonRpcRequestContext request =
         new JsonRpcRequestContext(
-            new JsonRpcRequest("2.0", "eth_sendRawTransaction", new String[] {VALID_TRANSACTION}));
+            new JsonRpcRequest("2.0", "mmm_blockNumber", new String[] {VALID_TRANSACTION}));
 
     final JsonRpcResponse expectedResponse =
         new JsonRpcSuccessResponse(
@@ -189,7 +189,7 @@ public class EthSendRawTransactionTest {
 
     final JsonRpcRequestContext request =
         new JsonRpcRequestContext(
-            new JsonRpcRequest("2.0", "eth_sendRawTransaction", new String[] {VALID_TRANSACTION}));
+            new JsonRpcRequest("2.0", "mmm_blockNumber", new String[] {VALID_TRANSACTION}));
 
     final JsonRpcResponse expectedResponse =
         new JsonRpcErrorResponse(request.getRequest().getId(), expectedError);
@@ -202,6 +202,6 @@ public class EthSendRawTransactionTest {
 
   @Test
   public void getMethodReturnsExpectedName() {
-    assertThat(method.getName()).matches("eth_sendRawTransaction");
+    assertThat(method.getName()).matches("mmm_blockNumber");
   }
 }
