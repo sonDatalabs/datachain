@@ -34,9 +34,10 @@ import org.mockito.junit.MockitoJUnitRunner;
 public class EthBlockNumberTest {
 
   private final String JSON_RPC_VERSION = "2.0";
-  private final String ETH_METHOD = "eth_blockNumber";
+  private final String ETH_METHOD = "mmm_blockNumber";
 
-  @Mock private BlockchainQueries blockchainQueries;
+  @Mock
+  private BlockchainQueries blockchainQueries;
   private EthBlockNumber method;
 
   @Before
@@ -55,12 +56,11 @@ public class EthBlockNumberTest {
 
     when(blockchainQueries.headBlockNumber()).thenReturn(headBlockNumber);
 
-    final JsonRpcRequestContext request =
-        new JsonRpcRequestContext(
-            new JsonRpcRequest(JSON_RPC_VERSION, ETH_METHOD, new Object[] {}));
+    final JsonRpcRequestContext request = new JsonRpcRequestContext(
+        new JsonRpcRequest(JSON_RPC_VERSION, ETH_METHOD, new Object[] {}));
 
-    final JsonRpcResponse expected =
-        new JsonRpcSuccessResponse(request.getRequest().getId(), Quantity.create(headBlockNumber));
+    final JsonRpcResponse expected = new JsonRpcSuccessResponse(request.getRequest().getId(),
+        Quantity.create(headBlockNumber));
     final JsonRpcResponse actual = method.response(request);
 
     assertThat(actual).usingRecursiveComparison().isEqualTo(expected);

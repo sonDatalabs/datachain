@@ -44,7 +44,7 @@ public class EthGraphQLHttpBySpecTest extends AbstractEthGraphQLHttpServiceTest 
   public static Collection<String> specs() {
     final List<String> specs = new ArrayList<>();
 
-    specs.add("eth_blockNumber");
+    specs.add("mmm_blockNumber");
 
     specs.add("eth_call_Block8");
     specs.add("eth_call_Block8_invalidHexBytesData");
@@ -121,9 +121,8 @@ public class EthGraphQLHttpBySpecTest extends AbstractEthGraphQLHttpServiceTest 
 
   private void graphQLCall(final String name) throws IOException {
     final String testSpecFile = name + ".json";
-    final String json =
-        Resources.toString(
-            EthGraphQLHttpBySpecTest.class.getResource(testSpecFile), Charsets.UTF_8);
+    final String json = Resources.toString(
+        EthGraphQLHttpBySpecTest.class.getResource(testSpecFile), Charsets.UTF_8);
     final JsonObject spec = new JsonObject(json);
     final String rawRequestBody = spec.getString("request");
     final RequestBody requestBody = RequestBody.create(rawRequestBody, GRAPHQL);

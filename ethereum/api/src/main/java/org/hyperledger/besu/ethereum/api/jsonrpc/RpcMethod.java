@@ -110,7 +110,7 @@ public enum RpcMethod {
   ETH_NEW_PENDING_TRANSACTION_FILTER("eth_newPendingTransactionFilter"),
   ETH_PROTOCOL_VERSION("eth_protocolVersion"),
   ETH_SEND_RAW_PRIVATE_TRANSACTION("eth_sendRawPrivateTransaction"),
-  ETH_SEND_RAW_TRANSACTION("mmm_sendRawTransaction"),
+  ETH_SEND_RAW_TRANSACTION("eth_sendRawTransaction"),
   ETH_SEND_TRANSACTION("eth_sendTransaction"),
   ETH_SUBMIT_HASHRATE("eth_submitHashrate"),
   ETH_SUBMIT_WORK("eth_submitWork"),
