@@ -294,7 +294,7 @@ public final class RunnerTest {
                                     MediaType.parse("application/json; charset=utf-8"),
                                     "{\"jsonrpc\":\"2.0\",\"id\":"
                                         + Json.encode(7)
-                                        + ",\"method\":\"mmb_blockNumber\"}"))
+                                        + ",\"method\":\"mmm_blockNumber\"}"))
                             .url(baseUrl)
                             .build())
                     .execute()) {
