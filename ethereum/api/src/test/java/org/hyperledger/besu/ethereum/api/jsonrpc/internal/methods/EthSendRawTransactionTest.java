@@ -80,7 +80,7 @@ public class EthSendRawTransactionTest {
   public void requestHasNullArrayParameter() {
     final JsonRpcRequestContext request =
         new JsonRpcRequestContext(
-            new JsonRpcRequest("2.0", "mmm_blockNumber", new String[] {null}));
+            new JsonRpcRequest("2.0", "mmc_blockNumber", new String[] {null}));
 
     final JsonRpcResponse expectedResponse =
         new JsonRpcErrorResponse(request.getRequest().getId(), JsonRpcError.INVALID_PARAMS);
